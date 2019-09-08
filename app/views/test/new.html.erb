@@ -1,0 +1,14 @@
+<div class="container text-center">
+  <h5 class="pt-5 pb-3">コメントを入力してください</h5>
+  <% @post.errors.full_messages.each do |message| %>
+    <div class="alert alert-danger">
+      <%= message %>
+    </div>
+  <% end %>
+  <%= form_tag('/test/create', method: :post) do %>
+      <input class="form-control w-50 d-inline-block" type="text" name="content" value="<%= @post.content %>"/>
+      <br>
+      <button class="btn btn-success mt-3" type="submit">送信</button>
+  <% end %>
+</div>
+

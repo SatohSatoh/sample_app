@@ -1,0 +1,11 @@
+<div class="container text-center">
+  <h5 class="pt-5 pb-3">コメントを編集してください</h5>
+  <% @post.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+  <%= form_tag("/test/#{@post.id}/update", method: :post,data: {confirm: "コメントを更新します\nよろしいですか？"}) do %>
+    <input class="form-control w-50 d-inline-block" type="text" name="content" value="<%= @post.content %>"/>
+    <br>
+    <button class="btn btn-success mt-3" type="submit">送信</button>
+<% end %>
+</div>

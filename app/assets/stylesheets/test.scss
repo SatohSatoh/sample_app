@@ -1,0 +1,46 @@
+// Place all the styles related to the test controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.logo {
+    background-image: url("../images/1558777.jpg");
+    height: 400px;
+
+    h1 {
+        position: relative;
+        top: 50%;
+    }
+}
+
+.form {
+    width: 400px;
+    height: 35px;
+}
+
+.form-control {
+    display: inline-block;
+}
+
+.btn a {
+    color: white;
+
+    &:hover{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.d-flex > div:nth-of-type(2){
+    white-space: nowrap
+}
+
+.pagination > span {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
