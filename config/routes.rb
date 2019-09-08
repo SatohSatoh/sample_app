@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :test
+  root 'test#top'
   get 'test/top' => 'test#top'
   get 'test/new' => 'test#new'
   get 'test/index' => 'test#index'
